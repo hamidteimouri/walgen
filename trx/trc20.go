@@ -1,8 +1,8 @@
 package trx
 
 import (
+	"github.com/hamidteimouri/walgen/wallet"
 	"github.com/lizc2003/gotron-sdk/pkg/client"
-	"github.com/lizc2003/hdwallet/wallet"
 	"math/big"
 )
 

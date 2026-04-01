@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"github.com/btcsuite/btcd/rpcclient"
-	"github.com/lizc2003/hdwallet/wallet"
+	"github.com/hamidteimouri/walgen/wallet"
 	"net/url"
 )
 

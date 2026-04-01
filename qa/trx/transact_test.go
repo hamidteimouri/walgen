@@ -2,8 +2,8 @@ package trx
 
 import (
 	"fmt"
-	"github.com/lizc2003/hdwallet/trx"
-	"github.com/lizc2003/hdwallet/wallet"
+	"github.com/hamidteimouri/walgen/trx"
+	"github.com/hamidteimouri/walgen/wallet"
 	"github.com/stretchr/testify/require"
 	"math/big"
 	"testing"

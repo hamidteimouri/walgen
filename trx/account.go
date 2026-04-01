@@ -1,9 +1,9 @@
 package trx
 
 import (
+	"github.com/hamidteimouri/walgen/wallet"
 	"github.com/lizc2003/gotron-sdk/pkg/client"
 	"github.com/lizc2003/gotron-sdk/pkg/proto/core"
-	"github.com/lizc2003/hdwallet/wallet"
 )
 
 func FreezeEnergyBalance(w *wallet.TrxWallet, client *client.GrpcClient, delegateTo string, frozenBalance int64) (string, error) {

@@ -2,9 +2,9 @@ package btc
 
 import (
 	"fmt"
-	"github.com/lizc2003/hdwallet/btc"
-	"github.com/lizc2003/hdwallet/qa"
-	"github.com/lizc2003/hdwallet/wallet"
+	"github.com/hamidteimouri/walgen/btc"
+	"github.com/hamidteimouri/walgen/qa"
+	"github.com/hamidteimouri/walgen/wallet"
 	"os"
 	"os/exec"
 	"strings"

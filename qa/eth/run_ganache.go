@@ -2,8 +2,8 @@ package eth
 
 import (
 	"fmt"
-	"github.com/lizc2003/hdwallet/eth"
-	"github.com/lizc2003/hdwallet/qa"
+	"github.com/hamidteimouri/walgen/eth"
+	"github.com/hamidteimouri/walgen/qa"
 	"os"
 	"os/exec"
 	"time"

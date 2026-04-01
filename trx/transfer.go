@@ -1,8 +1,8 @@
 package trx
 
 import (
+	"github.com/hamidteimouri/walgen/wallet"
 	"github.com/lizc2003/gotron-sdk/pkg/client"
-	"github.com/lizc2003/hdwallet/wallet"
 )
 
 func TransferTrx(w *wallet.TrxWallet, client *client.GrpcClient, toAddr string, amount int64) (string, error) {

@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/lizc2003/hdwallet/eth"
-	"github.com/lizc2003/hdwallet/wallet"
+	"github.com/hamidteimouri/walgen/eth"
+	"github.com/hamidteimouri/walgen/wallet"
 	"github.com/stretchr/testify/require"
 	"math/big"
 	"testing"
@@ -98,9 +98,7 @@ func TestTransaction(t *testing.T) {
 		rq.Nil(err)
 		fmt.Println("tx block number:", receipt.BlockNumber)
 		rq.True(receipt.BlockNumber.Cmp(blockNumber) == 0)
-		block, err := cli.RpcClient.BlockByNumber(context.Background(), blockNumber)
-		rq.Nil(err)
-		sig := types.MakeSigner(chainParam, receipt.BlockNumber, block.Time())
+		sig := types.MakeSigner(chainParam, receipt.BlockNumber)
 		from2, err := types.Sender(sig, tx2)
 		rq.Nil(err)
 		fmt.Println("tx from address:", from2)

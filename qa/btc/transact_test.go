@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/btcsuite/btcd/btcjson"
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/lizc2003/hdwallet/btc"
-	"github.com/lizc2003/hdwallet/wallet"
+	"github.com/hamidteimouri/walgen/btc"
+	"github.com/hamidteimouri/walgen/wallet"
 	"github.com/stretchr/testify/require"
 	"testing"
 )

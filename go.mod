@@ -1,6 +1,8 @@
 module github.com/hamidteimouri/walgen
 
-go 1.20
+go 1.23.0
+
+toolchain go1.24.3
 
 require (
 	github.com/btcsuite/btcd v0.23.2
@@ -13,7 +15,6 @@ require (
 	github.com/ethereum/go-ethereum v1.10.25
 	github.com/hamidteimouri/gobip39 v0.0.2
 	github.com/lizc2003/gotron-sdk v0.0.0-20221010131620-2fa8f18bda85
-	github.com/lizc2003/hdwallet v0.1.16
 	github.com/stretchr/testify v1.7.2
 	google.golang.org/grpc v1.37.0
 	google.golang.org/protobuf v1.26.0
