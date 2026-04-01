@@ -11,7 +11,7 @@ require (
 	github.com/btcsuite/btcwallet/wallet/txrules v1.2.0
 	github.com/btcsuite/btcwallet/wallet/txsizes v1.2.3
 	github.com/ethereum/go-ethereum v1.10.25
-	github.com/hamidteimouri/gobip39 v0.0.1
+	github.com/hamidteimouri/gobip39 v0.0.2
 	github.com/lizc2003/gotron-sdk v0.0.0-20221010131620-2fa8f18bda85
 	github.com/lizc2003/hdwallet v0.1.16
 	github.com/stretchr/testify v1.7.2

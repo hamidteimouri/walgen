@@ -22,44 +22,44 @@ func NewHDWallet(mnemonic, password string, btcChainId int, ethChainId int) (*HD
 	return &HDWallet{seed: seed, btcChainId: btcChainId, ethChainId: ethChainId}, nil
 }
 
-func (this *HDWallet) NewWallet(symbol string, accountIndex, changeType, index int) (Wallet, error) {
-	path, err := MakeBip44Path(symbol, this.btcChainId, accountIndex, changeType, index)
+func (h *HDWallet) NewWallet(symbol string, accountIndex, changeType, index int) (Wallet, error) {
+	path, err := MakeBip44Path(symbol, h.btcChainId, accountIndex, changeType, index)
 	if err != nil {
 		return nil, err
 	}
 
-	return this.NewWalletByPath(symbol, path, SegWitNone)
+	return h.NewWalletByPath(symbol, path, SegWitNone)
 }
 
-func (this *HDWallet) NewSegWitWallet(accountIndex, changeType, index int) (Wallet, error) {
-	path, err := MakeBip49Path(SymbolBtc, this.btcChainId, accountIndex, changeType, index)
+func (h *HDWallet) NewSegWitWallet(accountIndex, changeType, index int) (Wallet, error) {
+	path, err := MakeBip49Path(SymbolBtc, h.btcChainId, accountIndex, changeType, index)
 	if err != nil {
 		return nil, err
 	}
-	return this.NewWalletByPath(SymbolBtc, path, SegWitScript)
+	return h.NewWalletByPath(SymbolBtc, path, SegWitScript)
 }
 
-func (this *HDWallet) NewNativeSegWitWallet(accountIndex, changeType, index int) (Wallet, error) {
-	path, err := MakeBip84Path(SymbolBtc, this.btcChainId, accountIndex, changeType, index)
+func (h *HDWallet) NewNativeSegWitWallet(accountIndex, changeType, index int) (Wallet, error) {
+	path, err := MakeBip84Path(SymbolBtc, h.btcChainId, accountIndex, changeType, index)
 	if err != nil {
 		return nil, err
 	}
-	return this.NewWalletByPath(SymbolBtc, path, SegWitNative)
+	return h.NewWalletByPath(SymbolBtc, path, SegWitNative)
 }
 
-func (this *HDWallet) NewWalletByPath(symbol string, path string, segWitType SegWitType) (Wallet, error) {
+func (h *HDWallet) NewWalletByPath(symbol string, path string, segWitType SegWitType) (Wallet, error) {
 	var w Wallet
 	var err error
 
 	switch symbol {
 	case SymbolBtc:
-		w, err = NewBtcWalletByPath(path, this.seed, this.btcChainId, segWitType)
+		w, err = NewBtcWalletByPath(path, h.seed, h.btcChainId, segWitType)
 	case SymbolEth:
-		w, err = NewEthWalletByPath(path, this.seed, this.ethChainId)
+		w, err = NewEthWalletByPath(path, h.seed, h.ethChainId)
 	case SymbolBnb:
-		w, err = NewEthWalletByPath(path, this.seed, ChainBsc)
+		w, err = NewEthWalletByPath(path, h.seed, ChainBsc)
 	case SymbolTrx:
-		w, err = NewTrxWalletByPath(path, this.seed)
+		w, err = NewTrxWalletByPath(path, h.seed)
 	default:
 		err = fmt.Errorf("symbol not supported: %s", symbol)
 	}
