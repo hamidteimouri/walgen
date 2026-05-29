@@ -80,8 +80,8 @@ func GetEthChainParams(chainId int) (*params.ChainConfig, error) {
 	//	return params.RopstenChainConfig, nil
 	//case ChainRinkeby:
 	//	return params.RinkebyChainConfig, nil
-	case ChainGoerli:
-		return params.GoerliChainConfig, nil
+	//case ChainGoerli:
+	//	return params.GoerliChainConfig, nil
 	//case ChainHolesky:
 	//	return params.HoleskyChainConfig, nil
 	case ChainSepolia:
